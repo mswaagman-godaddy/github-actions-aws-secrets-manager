@@ -68,7 +68,7 @@ export const injectSecretValueMapToEnvironment = (secretValueMap: Record<string,
     // Get POSIX compliant name secondary env name that can be read by the shell
     const secretNamePOSIX = getPOSIXString(secretName)
     if (secretName !== secretNamePOSIX) {
-      core.warning('One of the secrets has a name that is not POSIX compliant and hence cannot directly \
+      core.notice('One of the secrets has a name that is not POSIX compliant and hence cannot directly \
 be used/injected as an environment variable name. Therefore, it will be transformed into a POSIX compliant \
 environment variable name. Enable GitHub Actions Debug Logging \
 (https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/enabling-debug-logging) to \
